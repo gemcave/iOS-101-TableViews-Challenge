@@ -10,12 +10,15 @@ import UIKit
 
 class PaperViewController: UIViewController {
     var monthToShow: Int = 0
+    var monthName = ""
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        navigationItem.title = monthName
+        print(monthName)
     }
     
     
@@ -31,9 +34,6 @@ class PaperViewController: UIViewController {
         imageView.image = UIImage(named: imageName)
     }
     
-    @IBAction func tapClose(){
-    dismissViewControllerAnimated(true,completion: nil)
-    }
     
 }
 

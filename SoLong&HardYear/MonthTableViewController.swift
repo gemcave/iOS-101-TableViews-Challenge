@@ -32,6 +32,7 @@ class TableMonthViewController: UITableViewController{
             let paperViewController = segue.destinationViewController as! PaperViewController
             if let indexPath = tableView.indexPathForSelectedRow {
                 paperViewController.monthToShow = indexPath.row + 1
+                paperViewController.monthName = months[indexPath.row]
             }
         }
     }
